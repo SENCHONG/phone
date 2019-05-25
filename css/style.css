@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.wrapper {
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0 0 60px 0;
+}
+
+form {
+    padding: 60px 0 10px 0;
+}
+
+form input {
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    padding: 8px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #424242;
+    opacity: 0.7;
+}
+
+form input:focus {
+    border-color: cadetblue;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wrapper>div>div:hover {
+    opacity: 0.7;
+}
+
+.res-box,
+.detail-box,
+.btn {
+    display: none;
+}
+
+@media screen and (max-width:480px) {
+    .wrapper {
+        width: 100%;
+    }
+    .wrapper form input {
+        width: 80%;
+    }
+    .wrapper>div {
+        margin: 0 auto;
+        background-color: #fcf7f2;
+        opacity: 0.7;
+        padding: 9px 0;
+    }
+    .wrapper>div>span {
+        display: block;
+        width: 80%;
+        overflow-x: auto;
+        margin: 0 auto;
+        line-height: 40px;
+        font-size: 14px;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .wrapper>div>div {
+        height: 40px;
+        width: 80%;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 3px;
+        font-size: 17px;
+        cursor: pointer;
+        letter-spacing: 5px;
+        opacity: 0.9;
+    }
+}
+
+@media screen and (min-width:480px) {
+    .wrapper {
+        width: 720px;
+        border-radius: 3px;
+        box-shadow: 0 0 3px #ccc;
+    }
+    .wrapper form input {
+        width: 420px;
+    }
+    .wrapper>div {
+        margin: 0 auto;
+        background-color: #fcf7f2;
+        opacity: 0.7;
+        height: 40px;
+        padding: 9px 0;
+    }
+    .wrapper>div>span {
+        display: block;
+        max-width: 420px;
+        overflow-x: auto;
+        float: left;
+        margin-left: 150px;
+        line-height: 40px;
+        font-size: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .wrapper>div>div {
+        float: right;
+        height: 100%;
+        width: 70px;
+        margin-right: 150px;
+        border: 1px solid #ccc;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 3px;
+        font-size: 17px;
+        cursor: pointer;
+        letter-spacing: 5px;
+        opacity: 0.9;
+    }
+}

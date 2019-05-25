@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="纯静态实现电话号码识别">
+    <meta name="keyword" content="电话号码数据库，电话号码识别，纯静态实现">
+    <title>电话号码识别</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="">
+            <input name="number" class="number" type="number" placeholder="输入电话号码" required autofocus autocomplete="off">
+
+        </form>
+        <div class="detail-box">
+            <span class="detail"></span>
+            <div class="btn">识别</div>
+        </div>
+        <div class="res-box">
+            <span class="result"></span>
+        </div>
+    </div>
+</body>
+<script src="data/database.js"></script>
+<script src="js/phone.js"></script>
+<script>
+    // 获取可视区的宽高
+    var retViewportOffset = function() {
+        if (window.innerWidth) {
+            return {
+                w: window.innerWidth,
+                h: window.innerHeight
+            }
+        } else {
+            if (document.compatMode === 'BackCompat') {
+                return {
+                    w: document.body.clientWidth,
+                    h: document.body.clientHeight
+                }
+            } else {
+                return {
+                    w: document.documentElement.clientWidth,
+                    h: document.documentElement.clientHeight
+                }
+            }
+        }
+    }
+
+    function setWrapperMarTop() {
+        var offect = retViewportOffset();
+        var wrapper = document.getElementsByClassName('wrapper')[0];
+
+        var mar_top = (offect.h - wrapper.clientHeight) / 2;
+        wrapper.style.marginTop = mar_top + 'px';
+    }
+    window.onresize = function() {
+        setWrapperMarTop();
+    }
+    window.onload = function() {
+        setWrapperMarTop();
+    }
+</script>
+
+
+</html>
